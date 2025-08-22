@@ -1,13 +1,17 @@
 public class Main {
     public static void main(String[] args) {
         BonusService bonusService = new BonusService();
-        long amount = 1000;
-        boolean registered = true;
+
+        // Пример данных для подсчета бонусов
+        long amount = 1000; // 1000 рублей
+        boolean registered = false; // незарегистрированный пользователь
+
+        // Вызываем метод и получаем бонус
         long bonus = bonusService.calculate(amount, registered);
 
-        System.out.println("Начальная сумма: " + amount);
-        System.out.println("Зарегистрированный: " + registered);
-        System.out.println("Начисленный бонус: " + bonus);
+        // Выводим результат
+        System.out.println("Начисленный бонус: " + bonus + " рублей."); // Ожидаемый результат: 10 рублей
     }
 }
+
 
