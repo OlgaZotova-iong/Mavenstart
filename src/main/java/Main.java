@@ -1,11 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        BonusService bonusService = new BonusService();
-
-        long amount = 50_000;
+        BonusService service = new BonusService();
+        long amount = 50000;
         boolean registered = false;
-        long bonus = bonusService.calculate(amount, registered);
-
-        System.out.println("Бонус для незарегистрированного пользователя (сумма 50000): " + bonus);
+        long bonus = service.calculate(amount, registered);
+        System.out.println("Бонус: " + bonus);
     }
 }
